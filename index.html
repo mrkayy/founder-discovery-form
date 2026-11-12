@@ -1,0 +1,1970 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F8FAFC">
+  <title>Pursely · Unit economics discovery</title>
+  <link rel="icon" type="image/png" href="pursely-main-logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar"><a class="brand" href="#top" aria-label="Pursely founder discovery"><img class="brand-logo"
+        src="pursely-main-logo.png" alt="Pursely"><span class="brand-divider">/</span><span>Founder
+        discovery</span></a><span class="local-note"><span class="status-dot"></span> Saved on this device<span class="save-time" id="save-time"></span></span>
+  </header>
+  <main id="top">
+    <section class="intro">
+      <div class="hero-content">
+        <div class="eyebrow"><span>FINANCE</span><span class="eyebrow-line"></span><span>UNIT ECONOMICS</span></div>
+        <h1>Let’s build the<br><em>numbers together.</em></h1>
+        <p class="brand-tagline">Your money. Your priorities. Your control.</p>
+        <p class="intro-copy">Share the assumptions behind Pursely’s unit economics. Your answers help the leadership
+          team build a clear, evidence-backed view of the business.</p>
+        <div class="intro-meta">
+          <div><span class="meta-label">TIME</span><strong>About 20 minutes</strong></div>
+          <div><span class="meta-label">FIELDS</span><strong id="field-total">172 questions</strong></div>
+          <div><span class="meta-label">FORMAT</span><strong>One CSV download</strong></div>
+        </div>
+        <div class="guidance"><span class="guidance-icon">i</span>
+          <p><strong>How to complete:</strong> Fill in your answer, then add a source and date in the notes for material
+            assumptions. If you don’t know something, write <code>UNKNOWN</code>. Label estimates and include your
+            confidence. Existing values are starting points, not verified facts.</p>
+        </div>
+      </div>
+    </section>
+    <section class="identity panel">
+      <div class="panel-heading">
+        <div><span class="step">BEFORE YOU BEGIN</span>
+          <h2>About you</h2>
+        </div><span class="panel-index">00</span>
+      </div>
+      <div class="identity-grid"><label>Your name<input id="respondent-name" type="text" autocomplete="name"
+            placeholder="e.g. Ada Okafor"></label><label>Work email<input id="respondent-email" type="email"
+            autocomplete="email" placeholder="name@pursely.com"></label><label>Response date<input id="response-date"
+            type="date"></label></div>
+    </section>
+    <div class="toolbar">
+      <div><span class="step">YOUR DISCOVERY</span>
+        <h2>Assumptions &amp; inputs</h2>
+      </div>
+      <div class="toolbar-actions"><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search"
+            type="search" placeholder="Find a question…" aria-label="Search questions"></label><button
+          class="text-button" id="expand-all" type="button">Expand all</button></div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-track"><span id="progress-fill"></span></div><span id="progress-label">0 of 172
+        answered</span>
+    </div>
+    <form id="discovery-form">
+      <div id="sections"></div>
+    </form>
+    <section class="submit-panel">
+      <div><span class="step">READY TO SHARE?</span>
+        <h2>Your answers stay with you.</h2>
+        <p>Download a CSV you can send to the CFO and CEO for review and final collation.</p>
+      </div><button class="download-button" id="download" type="button"><span>Download response CSV</span><span
+          aria-hidden="true">↗</span></button>
+    </section>
+    <footer><span>Pursely · Founder discovery</span><span>Your draft auto-saves in this browser. Come back any time to review or edit.</span></footer>
+  </main>
+  <script id="field-data" type="application/json">[
+  {
+    "section": "00 Instructions",
+    "area": "Evidence",
+    "id": "EVIDENCE_TYPE",
+    "question": "For each material answer, state its evidence type and source/date.",
+    "existing": "",
+    "status": "Required",
+    "unit": "",
+    "guidance": "Use notes column.",
+    "plainQuestion": "For important answers, what evidence supports them, and when was it collected?"
+  },
+  {
+    "section": "00 Instructions",
+    "area": "Model conventions",
+    "id": "CURRENCY",
+    "question": "Confirm reporting currency.",
+    "existing": "Nigerian naira (NGN / ₦)",
+    "status": "Project context",
+    "unit": "Currency",
+    "guidance": "If any vendor invoices are in USD or another currency, state currency and FX assumption.",
+    "plainQuestion": "Which currency should the financial model use?"
+  },
+  {
+    "section": "00 Instructions",
+    "area": "Model conventions",
+    "id": "VAT_BASIS",
+    "question": "Should costs and prices be entered inclusive or exclusive of VAT?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Keep vendor VAT separate from customer fee VAT until confirmed.",
+    "plainQuestion": "Should the amounts you enter include value added tax (VAT), or should VAT be added separately?"
+  },
+  {
+    "section": "00 Instructions",
+    "area": "Forecast",
+    "id": "HORIZON",
+    "question": "Confirm forecast horizon and granularity.",
+    "existing": "24-month monthly projection proposed",
+    "status": "Proposed",
+    "unit": "Months",
+    "guidance": "Confirm 24, 36 or 60 months.",
+    "plainQuestion": "How far ahead should the forecast cover, and should it be monthly or another time interval?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Acquisition",
+    "id": "YEAR1_REGISTRATIONS",
+    "question": "Cumulative registered-user target by end of Year 1?",
+    "existing": "10,000",
+    "status": "Founder target",
+    "unit": "Users",
+    "guidance": "Confirm cumulative vs new registrations during Year 1.",
+    "plainQuestion": "How many total people do you aim to have registered by the end of Year 1?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Acquisition",
+    "id": "MONTHLY_REGISTRATIONS",
+    "question": "Expected new registrations by month?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "Users/month",
+    "guidance": "Provide a monthly ramp, not only an annual total.",
+    "plainQuestion": "How many new people do you expect to register in each month?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Acquisition",
+    "id": "CHANNELS",
+    "question": "Which channels generate registrations (organic, referrals, paid, partnerships, employers, communities, other)?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Give expected user share or volume by channel.",
+    "plainQuestion": "Where do you expect new users to come from, such as referrals, ads, employers, or communities?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Acquisition",
+    "id": "CHANNEL_CONVERSION",
+    "question": "Expected conversion and/or cost by acquisition channel?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "% / ₦ per user",
+    "guidance": "Separate observed data from estimates.",
+    "plainQuestion": "For each signup channel, how many people do you expect to convert, and what will it cost?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "KYC",
+    "id": "KYC_COMPLETION",
+    "question": "Expected KYC completion rate?",
+    "existing": "80%",
+    "status": "Founder estimate",
+    "unit": "% of registrations",
+    "guidance": "Confirm denominator and whether this is full KYC completion or KYC Level 1.",
+    "plainQuestion": "What share of people who register do you expect to complete identity checks?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "KYC",
+    "id": "WALLET_CREATION_RULE",
+    "question": "What event allows wallet creation?",
+    "existing": "After KYC Level 1 / successful BVN validation",
+    "status": "Product rule stated",
+    "unit": "",
+    "guidance": "Confirm exact required checks and exceptions.",
+    "plainQuestion": "What checks or steps must a person complete before Pursely creates their wallet?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "KYC",
+    "id": "KYC_PROVIDER",
+    "question": "Who provides BVN, identity and KYC checks?",
+    "existing": "Mono mentioned as prospective provider; not confirmed",
+    "status": "Unconfirmed",
+    "unit": "",
+    "guidance": "List provider per check.",
+    "plainQuestion": "Which companies will check users’ identity, BVN, and other required details?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "KYC",
+    "id": "KYC_COST",
+    "question": "Cost per KYC check, BVN validation, retry, failure and manual review?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / event",
+    "guidance": "Include VAT and free allowances.",
+    "plainQuestion": "What will each identity check cost, including retries, failed checks, and manual reviews?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Funding conversion",
+    "id": "FUNDED_CONVERSION",
+    "question": "Expected funded-wallet conversion from KYC-completed users?",
+    "existing": "65%",
+    "status": "Founder estimate",
+    "unit": "% of KYC-completed users",
+    "guidance": "Confirm denominator.",
+    "plainQuestion": "Of the users who pass identity checks, what share do you expect to add money to their wallet?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Funding conversion",
+    "id": "FUNDED_USERS",
+    "question": "Confirm implied funded wallets from current funnel.",
+    "existing": "5,200 (10,000 × 80% × 65%)",
+    "status": "Calculated",
+    "unit": "Users",
+    "guidance": "Cumulative funnel output, not necessarily monthly active funded users.",
+    "plainQuestion": "Based on the current signup and verification assumptions, how many users will have funded wallets?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Activity",
+    "id": "MAU_TARGET",
+    "question": "Expected monthly active users?",
+    "existing": "6,000",
+    "status": "Founder target",
+    "unit": "Users/month",
+    "guidance": "Define an active user event.",
+    "plainQuestion": "How many people do you expect to use Pursely at least once in a typical month?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Activity",
+    "id": "ACTIVE_FUNDED_USERS",
+    "question": "Expected monthly active users who are both funded and transacting?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "Users/month",
+    "guidance": "Do not assume every MAU is funded.",
+    "plainQuestion": "How many monthly users do you expect to both have money in their wallet and make a transaction?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Activity",
+    "id": "ACTIVE_FUNDED_SHARE",
+    "question": "Expected active-funded users as a share of MAU?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "% of MAU",
+    "guidance": "",
+    "plainQuestion": "What share of monthly active users do you expect to have a funded wallet and make a transaction?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Retention",
+    "id": "RETENTION_30D",
+    "question": "Expected 30-day cohort retention?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "Define qualifying activity.",
+    "plainQuestion": "Of users who start in one period, what share do you expect to still be active 30 days later?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Retention",
+    "id": "RETENTION_60D",
+    "question": "Expected 60-day cohort retention?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "",
+    "plainQuestion": "What share of a new user group do you expect to still be active after 60 days?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Retention",
+    "id": "RETENTION_90D",
+    "question": "Expected 90-day cohort retention?",
+    "existing": "60%",
+    "status": "Founder estimate; later confirmation",
+    "unit": "%",
+    "guidance": "Earlier 80% was selected, then 60% stated. Please reconfirm.",
+    "plainQuestion": "What share of a new user group do you expect to still be active after 90 days?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Retention",
+    "id": "RETENTION_180D",
+    "question": "Expected 180-day cohort retention?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "",
+    "plainQuestion": "What share of a new user group do you expect to still be active after 180 days?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Retention",
+    "id": "MONTHLY_CHURN",
+    "question": "Expected monthly active-user churn?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%/month",
+    "guidance": "Do not convert 90-day retention into monthly churn without cohort assumptions.",
+    "plainQuestion": "What share of active users do you expect to stop using Pursely each month?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Segments",
+    "id": "USER_SEGMENTS",
+    "question": "Expected user mix by salaried, gig/contract, daily earner, family/household and other?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "State whether categories are mutually exclusive; sum to 100% if so.",
+    "plainQuestion": "What share of users do you expect in each group: salaried, gig or contract workers, daily earners, households, and other?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Segments",
+    "id": "SEGMENT_FUNDED_RATE",
+    "question": "KYC-to-funded conversion by segment?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "",
+    "plainQuestion": "For each user group, what share of people who pass identity checks do you expect to add money?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Segments",
+    "id": "SEGMENT_RETENTION",
+    "question": "30/60/90-day retention by segment?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "",
+    "plainQuestion": "For each user group, what share do you expect to remain active after 30, 60, and 90 days?"
+  },
+  {
+    "section": "01 Customer funnel and activity",
+    "area": "Definitions",
+    "id": "USER_DEFINITIONS",
+    "question": "Define registered, KYC-complete, wallet-created, funded, active, active-funded, paying and churned users.",
+    "existing": "Wallet after KYC Level 1 / BVN",
+    "status": "Partly established",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "What exactly counts as a registered, verified, wallet-created, funded, active, paying, or churned user?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Deposits",
+    "id": "AVG_MONTHLY_DEPOSIT",
+    "question": "Average monthly deposit amount per funded user?",
+    "existing": "₦250,000",
+    "status": "Founder estimate",
+    "unit": "₦ / user / month",
+    "guidance": "An earlier entry showed ₦2,500,000; later clarification was ₦250,000. Confirm.",
+    "plainQuestion": "On average, how much money will each user with a funded wallet add per month?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Deposits",
+    "id": "DEPOSITS_PER_MONTH_MIN",
+    "question": "Minimum deposits per user per month?",
+    "existing": "3",
+    "status": "Founder estimate / range",
+    "unit": "Deposits/user/month",
+    "guidance": "Previously stated range 3–8.",
+    "plainQuestion": "In a low-use month, how many times might one user add money?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Deposits",
+    "id": "DEPOSITS_PER_MONTH_MAX",
+    "question": "Maximum deposits per user per month?",
+    "existing": "8",
+    "status": "Founder estimate / range",
+    "unit": "Deposits/user/month",
+    "guidance": "Previously stated range 3–8.",
+    "plainQuestion": "In a high-use month, how many times might one user add money?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Deposits",
+    "id": "AVG_DEPOSIT_TICKET",
+    "question": "Average amount per deposit?",
+    "existing": "",
+    "status": "To calculate",
+    "unit": "₦ / deposit",
+    "guidance": "May be derived from monthly deposits and frequency.",
+    "plainQuestion": "How much money will a user add in a typical single deposit?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Deposits",
+    "id": "SEGMENT_DEPOSITS",
+    "question": "Monthly deposit amount and frequency by user segment?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ and count",
+    "guidance": "Separate salaried, gig/contract, daily earners and families.",
+    "plainQuestion": "For each user group, how much and how often will users add money each month?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Balances",
+    "id": "AVG_BALANCE",
+    "question": "Average month-end wallet balance per funded user?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦",
+    "guidance": "Do not assume monthly deposits equal average balance.",
+    "plainQuestion": "At the end of a typical month, how much money will each funded user have in their wallet on average?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Balances",
+    "id": "AVG_DAILY_BALANCE",
+    "question": "Average daily balance eligible for any float arrangement?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / user",
+    "guidance": "Use average daily eligible balance, not deposits.",
+    "plainQuestion": "On an average day, how much wallet money per user might qualify under a float arrangement?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Balances",
+    "id": "BALANCE_DAYS",
+    "question": "Average days funds remain before withdrawal/spend?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "Days",
+    "guidance": "Provide by segment.",
+    "plainQuestion": "For about how many days does money usually stay in a wallet before being spent or withdrawn?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Balances",
+    "id": "BALANCE_DISTRIBUTION",
+    "question": "Distribution of users across balance bands?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "% by band",
+    "guidance": "Specify bands and share in each.",
+    "plainQuestion": "How many users do you expect in each wallet-balance range? Please list the ranges and shares."
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Funding mix",
+    "id": "BANK_TRANSFER_SHARE",
+    "question": "Share of funding via bank transfer?",
+    "existing": "75%",
+    "status": "Founder estimate",
+    "unit": "%",
+    "guidance": "Clarify share of transaction count or value.",
+    "plainQuestion": "What share of all wallet funding will come through bank transfers?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Funding mix",
+    "id": "DIRECT_DEBIT_SHARE",
+    "question": "Share of funding via Direct Debit?",
+    "existing": "25%",
+    "status": "Founder estimate",
+    "unit": "%",
+    "guidance": "Clarify share of count or value.",
+    "plainQuestion": "What share of wallet funding will come through Direct Debit, where money is collected from a linked bank account?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Funding mix",
+    "id": "CARD_SHARE",
+    "question": "Share of funding via card?",
+    "existing": "0%",
+    "status": "Founder estimate",
+    "unit": "%",
+    "guidance": "Initial assumption.",
+    "plainQuestion": "What share of wallet funding will come through card payments?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Funding mix",
+    "id": "OTHER_FUNDING_SHARE",
+    "question": "Share of funding via other methods?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "Enter 0% if none.",
+    "plainQuestion": "What share of wallet funding will come through any other method?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Funding mix",
+    "id": "FUNDING_MIX_BASIS",
+    "question": "Are funding mix percentages based on transaction count, value, or both?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Capture count and value mix separately if possible.",
+    "plainQuestion": "Are those funding shares based on the number of transactions, the amount of money, or both?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Withdrawals",
+    "id": "WITHDRAWALS_PER_MONTH",
+    "question": "Average withdrawals/outward transfers per active funded user per month?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "Transactions/user/month",
+    "guidance": "Previously described as daily but segment-dependent; quantify by segment.",
+    "plainQuestion": "How many withdrawals or transfers out of Pursely will an active funded user make each month on average?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Withdrawals",
+    "id": "WITHDRAWAL_TICKET",
+    "question": "Average value per withdrawal/outward transfer?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / transaction",
+    "guidance": "By segment and transaction type.",
+    "plainQuestion": "How much will a typical withdrawal or transfer out of Pursely be?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Withdrawals",
+    "id": "SEGMENT_FREQUENCY",
+    "question": "Withdrawal/outward transfer frequency by segment?",
+    "existing": "Daily was mentioned; segment-dependent",
+    "status": "Founder estimate",
+    "unit": "",
+    "guidance": "Convert to qualifying external events per month.",
+    "plainQuestion": "How often will people in each user group withdraw or transfer money out?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Transaction mix",
+    "id": "TXN_SIZE_MIX",
+    "question": "Expected count/value distribution across <₦10k, ₦10k–₦50k and >₦50k?",
+    "existing": "Provider fee estimates of ₦10 / ₦20 / ₦50",
+    "status": "Unverified estimates",
+    "unit": "",
+    "guidance": "Specify treatment of exactly ₦10,000 and ₦50,000.",
+    "plainQuestion": "What share of transactions do you expect to be under ₦10,000, between ₦10,000 and ₦50,000, or above ₦50,000? Give shares by count or value."
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Internal movements",
+    "id": "INTERNAL_MOVEMENTS",
+    "question": "Are movements between a user's own Pursely pockets chargeable?",
+    "existing": "No; internal pocket movements are free",
+    "status": "Product rule stated",
+    "unit": "Rule",
+    "guidance": "List any exceptions.",
+    "plainQuestion": "Will users pay a fee when moving money between their own Pursely pockets?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Chargeable events",
+    "id": "CHARGEABLE_EVENTS",
+    "question": "List all events that trigger the Pursely fee.",
+    "existing": "Withdrawals and outward transfers; daily-spend example unresolved",
+    "status": "Partly established",
+    "unit": "Event types",
+    "guidance": "Distinguish merchant payments, bank transfers, cash withdrawals, card payments, pocket allocations and internal transfers.",
+    "plainQuestion": "Which actions will cause Pursely to charge a customer a fee?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Daily spendable",
+    "id": "DAILY_SPENDABLE_FEE",
+    "question": "Does the 1.5% fee apply to each daily spend, only external merchant payments, or only money leaving Pursely?",
+    "existing": "Example: ₦1,724.14 × 1.5% = ₦25.86; exact chargeable event unresolved",
+    "status": "Open clarification",
+    "unit": "Rule",
+    "guidance": "Do not count internal daily allocations as chargeable events unless this is the explicit pricing rule.",
+    "plainQuestion": "When should the 1.5% fee apply: every daily purchase, purchases outside Pursely, or only money sent out of Pursely?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Fee basis",
+    "id": "FEE_BASIS",
+    "question": "Is the customer fee charged per transaction, withdrawal, transfer or another basis?",
+    "existing": "Per transaction",
+    "status": "Founder proposal",
+    "unit": "Rule",
+    "guidance": "Clarify split transactions and reversals.",
+    "plainQuestion": "What event is the customer charged for: each transaction, withdrawal, transfer, or something else?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Fee rate",
+    "id": "FEE_RATE",
+    "question": "Pursely fee rate on qualifying transactions?",
+    "existing": "1.5%",
+    "status": "Proposed pricing",
+    "unit": "%",
+    "guidance": "Confirm whether customer-facing fee is inclusive/exclusive of VAT.",
+    "plainQuestion": "What percentage or fixed fee will Pursely charge for transactions that qualify?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Fee cap",
+    "id": "FEE_CAP",
+    "question": "Maximum Pursely fee per qualifying transaction?",
+    "existing": "₦500",
+    "status": "Proposed pricing",
+    "unit": "₦",
+    "guidance": "At 1.5%, cap is reached at about ₦33,333.33.",
+    "plainQuestion": "What is the highest fee Pursely can charge for one eligible transaction?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Fee minimum",
+    "id": "FEE_MIN",
+    "question": "Minimum fee per qualifying transaction?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦",
+    "guidance": "Enter zero if none.",
+    "plainQuestion": "What is the lowest fee Pursely can charge for one eligible transaction?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Fee waivers",
+    "id": "FEE_WAIVERS",
+    "question": "Any exemptions by user, plan, transaction type or promotion?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "State eligibility and expected share.",
+    "plainQuestion": "Who or what transactions will be exempt from fees, including plan benefits or promotions?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Refunds",
+    "id": "FEE_REFUNDS",
+    "question": "Fee treatment for failed, reversed, refunded, disputed or timed-out transactions?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Are fees refunded? Are provider costs recoverable?",
+    "plainQuestion": "If a transaction fails, is reversed, refunded, disputed, or times out, what happens to the customer fee?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "VAT",
+    "id": "VAT_RATE",
+    "question": "What VAT rate/treatment applies to customer fees and provider invoices?",
+    "existing": "7.5% mentioned as BaaS-provider VAT; scope unresolved",
+    "status": "Founder clarification; unconfirmed",
+    "unit": "%",
+    "guidance": "Do not assume provider VAT is VAT on Pursely's fee.",
+    "plainQuestion": "What value added tax (VAT) rate and rules apply to customer fees and supplier bills?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "VAT",
+    "id": "VAT_CUSTOMER_FEE",
+    "question": "Is VAT added to Pursely's fee, included in it, or not applicable?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Is value added tax (VAT) added on top of Pursely’s customer fee, included in it, or not charged?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "VAT",
+    "id": "VAT_VENDOR_FEES",
+    "question": "Which vendor fees attract VAT, and can Pursely recover input VAT?",
+    "existing": "7.5% mentioned for BaaS provider",
+    "status": "Unconfirmed",
+    "unit": "",
+    "guidance": "Use invoice/contract/accountant confirmation.",
+    "plainQuestion": "Which supplier charges include value added tax (VAT), and can Pursely claim that VAT back?"
+  },
+  {
+    "section": "02 Funding, balances and transaction behaviour",
+    "area": "Tax",
+    "id": "OTHER_TAXES",
+    "question": "Any other taxes, levies, stamp duties or regulatory charges per transaction?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Identify who bears each charge.",
+    "plainQuestion": "Are there other taxes or government charges on transactions, and how much are they?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Transaction revenue",
+    "id": "TXN_REVENUE",
+    "question": "Confirm transaction revenue model and eligible transaction types.",
+    "existing": "1.5% capped at ₦500 on withdrawals/outward transfers; internal pocket movements free",
+    "status": "Proposed / partly confirmed",
+    "unit": "",
+    "guidance": "Resolve daily spendable ambiguity.",
+    "plainQuestion": "How will Pursely earn money from transactions, and which transaction types count?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Subscription",
+    "id": "SUBSCRIPTION_PLANS",
+    "question": "List paid plans, price, billing frequency, included features and free tier.",
+    "existing": "Not established in current discovery",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Include trial period and discounts.",
+    "plainQuestion": "What paid plans will you offer, how much will each cost, how often will users pay, and what is included?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Subscription",
+    "id": "PREMIUM_CONVERSION",
+    "question": "Expected paid-plan conversion from MAU?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "Provide monthly ramp or cohort estimate.",
+    "plainQuestion": "What share of monthly active users do you expect to pay for a plan?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Subscription",
+    "id": "SUBSCRIPTION_CHURN",
+    "question": "Expected monthly paid-subscriber churn?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%/month",
+    "guidance": "Separate from app churn.",
+    "plainQuestion": "What share of paying subscribers do you expect to cancel or stop paying each month?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Subscription",
+    "id": "SUBSCRIPTION_COLLECTION",
+    "question": "Subscription collection fees, failed payment rate and recovery assumptions?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Include taxes and payment gateway costs.",
+    "plainQuestion": "What will it cost to collect subscriptions, and how often might payments fail or be recovered later?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Float",
+    "id": "FLOAT_CONTRACT",
+    "question": "Is there a signed contractual share of eligible float income?",
+    "existing": "Potential only; no signed terms established",
+    "status": "Unconfirmed / contingent",
+    "unit": "",
+    "guidance": "Exclude from baseline until contract terms are known.",
+    "plainQuestion": "Does Pursely have a signed agreement that gives it a share of earnings on eligible customer balances?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Float",
+    "id": "FLOAT_RATE",
+    "question": "Rate/return on eligible balances and who determines it?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "% p.a.",
+    "guidance": "",
+    "plainQuestion": "What return is earned on eligible balances, and who sets that rate?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Float",
+    "id": "FLOAT_SHARE",
+    "question": "Pursely's percentage share of eligible float income?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "%",
+    "guidance": "Clarify gross/net basis, deductions and thresholds.",
+    "plainQuestion": "What percentage of the eligible balance earnings will Pursely receive?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Float",
+    "id": "FLOAT_ELIGIBILITY",
+    "question": "Which customer balances are eligible for float income?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "Do not assume all deposits qualify.",
+    "plainQuestion": "Which customer balances qualify to earn float income?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Float",
+    "id": "FLOAT_SETTLEMENT",
+    "question": "How often is float income calculated and paid?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "How often will float earnings be calculated and paid to Pursely?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Merchant",
+    "id": "MERCHANT_REVENUE",
+    "question": "Any merchant-funded cashback, referral, affiliate or other merchant revenue?",
+    "existing": "Future possibility; excluded from MVP baseline",
+    "status": "Future / excluded",
+    "unit": "",
+    "guidance": "Only include when commercial agreements exist.",
+    "plainQuestion": "Will merchants pay Pursely for cashback, referrals, affiliate sales, or other services? How much?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Investment",
+    "id": "INVESTMENT_REVENUE",
+    "question": "Any investment distribution revenue?",
+    "existing": "Excluded from MVP baseline",
+    "status": "Excluded for now",
+    "unit": "",
+    "guidance": "Only add if product scope and regulatory/commercial terms are confirmed.",
+    "plainQuestion": "Will Pursely earn any income from investments? If so, how is it calculated?"
+  },
+  {
+    "section": "03 Revenue streams and commercial terms",
+    "area": "Other",
+    "id": "OTHER_REVENUE",
+    "question": "List any other revenue streams, prices, timing and conditions.",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Identify contracted, planned or speculative.",
+    "plainQuestion": "What other ways will Pursely earn money, how much, and when will it be paid?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_STATUS",
+    "question": "What is the status of Rova pricing?",
+    "existing": "No formal pricing confirmed in prior discovery",
+    "status": "Awaiting update",
+    "unit": "",
+    "guidance": "Signed contract, written quote, verbal quote, negotiation or no pricing.",
+    "plainQuestion": "What has been agreed with Rova so far about pricing and fees?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_WALLET_CREATE",
+    "question": "Per-wallet creation/account-opening charge?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / wallet",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "What does Rova charge to open or create each wallet?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_WALLET_MONTHLY",
+    "question": "Recurring wallet maintenance/account fee?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / wallet / month",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "Does Rova charge a monthly fee to keep each wallet open?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_INBOUND",
+    "question": "Incoming bank transfer/deposit fee?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / transaction or %",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "What does Rova charge when money comes into a wallet?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_OUTBOUND",
+    "question": "Outgoing bank transfer fee?",
+    "existing": "Founder-estimated ₦10 / ₦20 / ₦50 bands were mentioned for third-party transactions; provider attribution unconfirmed.",
+    "status": "Unverified estimate",
+    "unit": "₦ / transaction or %",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "What does Rova charge when money is sent out of a wallet?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_WITHDRAWAL",
+    "question": "Withdrawal/cash-out fee?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / transaction or %",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "What does Rova charge when a customer withdraws or cashes out?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_DIRECT_DEBIT",
+    "question": "Direct Debit initiation/success fee?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / event or %",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "What does Rova charge to start and successfully collect a Direct Debit?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_FAILED",
+    "question": "Failed, reversed, timed-out or disputed transaction fee?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / event",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "What does Rova charge for failed, reversed, timed-out, or disputed transactions?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_PLATFORM",
+    "question": "Monthly platform/licence/minimum/support fee?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / month",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "Does Rova charge monthly platform, licence, minimum, or support fees?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_SETUP",
+    "question": "One-off setup, integration, certification or implementation fee?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "Are there one-time fees for setup, integration, certification, or implementation?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_MIN_VOLUME",
+    "question": "Minimum monthly volume, balance or revenue commitment?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "Does Rova require a minimum monthly transaction volume, wallet balance, or revenue?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_FLOAT",
+    "question": "Custody, safeguarding and float-sharing terms?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "Contract terms",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "What are Rova’s rules for holding customer money and sharing any earnings on it?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_SETTLEMENT",
+    "question": "Settlement times, cut-offs, reserves and prefunding requirements?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "When does Rova send settled money, and does it require reserves or advance funding?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_CONTRACTING",
+    "question": "Who is the legal contracting/licensed custody party?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "Which company will legally provide the wallet and hold or safeguard customer money?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Rova",
+    "id": "ROVA_VAT",
+    "question": "VAT/other tax applied to Rova fees?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "%",
+    "guidance": "Include tiers, free allowances, caps, VAT and quote/contract reference.",
+    "plainQuestion": "Does Rova add value added tax (VAT) or other taxes to its fees?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Custody",
+    "id": "CUSTODY_STRUCTURE",
+    "question": "Who contracts for custody and wallet services?",
+    "existing": "Options discussed: Rova-managed, FCMB MFB direct, separate arrangements or unknown",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Name each licensed entity and contractual counterparty.",
+    "plainQuestion": "Which company will legally hold or safeguard customer money and provide the wallets?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Mono",
+    "id": "MONO_STATUS",
+    "question": "What is the status of Mono pricing?",
+    "existing": "No formal pricing confirmed in prior discovery",
+    "status": "Awaiting update",
+    "unit": "",
+    "guidance": "Signed contract, written quote, verbal quote, negotiation or no pricing.",
+    "plainQuestion": "What has been agreed with Mono so far about pricing and fees?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Mono",
+    "id": "MONO_ACCOUNT_LINK",
+    "question": "Successful/failed account-linking or bank connection cost?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / event",
+    "guidance": "Include free tiers, VAT and quote reference.",
+    "plainQuestion": "What does Mono charge when a user links a bank account, including failed attempts?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Mono",
+    "id": "MONO_BVN",
+    "question": "BVN/identity verification check and retry cost?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / event",
+    "guidance": "Include free tiers, VAT and quote reference.",
+    "plainQuestion": "What does Mono charge for BVN or identity checks, including repeat checks?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Mono",
+    "id": "MONO_DD_INIT",
+    "question": "Direct Debit initiation cost?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / event",
+    "guidance": "Include free tiers, VAT and quote reference.",
+    "plainQuestion": "What does Mono charge to start a Direct Debit collection?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Mono",
+    "id": "MONO_DD_SUCCESS",
+    "question": "Successful Direct Debit collection fee?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / event or %",
+    "guidance": "Include free tiers, VAT and quote reference.",
+    "plainQuestion": "What does Mono charge when a Direct Debit collection succeeds?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Mono",
+    "id": "MONO_DD_FAILED",
+    "question": "Failed, returned, rejected or cancelled Direct Debit fee?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / event",
+    "guidance": "Include free tiers, VAT and quote reference.",
+    "plainQuestion": "What does Mono charge when a Direct Debit is rejected, returned, or cancelled?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Mono",
+    "id": "MONO_API",
+    "question": "API/platform/monthly minimum/setup/support fees?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦",
+    "guidance": "Include free tiers, VAT and quote reference.",
+    "plainQuestion": "Does Mono charge setup, monthly minimum, software connection, platform, or support fees?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Gateway",
+    "id": "GATEWAY_PROVIDER",
+    "question": "Which provider handles payment gateway/outward processing?",
+    "existing": "Paystack or Flutterwave were possibilities; not confirmed",
+    "status": "Unconfirmed",
+    "unit": "",
+    "guidance": "Clarify deposits, outward transfers, subscriptions and other use cases.",
+    "plainQuestion": "Which company will process payments or transfers made through a payment gateway?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Gateway",
+    "id": "GATEWAY_FEES",
+    "question": "Provide percentage, flat fee, cap, settlement, refund, chargeback and VAT charges.",
+    "existing": "Card funding currently assumed 0%",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "What percentage, fixed, or capped fees apply, and what are the settlement, refund, dispute, and VAT terms?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "SMS/OTP",
+    "id": "SMS_PROVIDER",
+    "question": "SMS/OTP provider?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Which company will send text messages and one-time passcodes (OTPs)?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "SMS/OTP",
+    "id": "SMS_COST",
+    "question": "Cost per SMS by network/destination/message type?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / SMS",
+    "guidance": "",
+    "plainQuestion": "How much does each text message cost for each network, destination, or message type?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "SMS/OTP",
+    "id": "OTP_COST",
+    "question": "Cost per OTP including retries and failed delivery?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / OTP",
+    "guidance": "",
+    "plainQuestion": "How much does each OTP message cost, including retries and messages that fail to arrive?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "SMS/OTP",
+    "id": "SMS_VOLUME",
+    "question": "Expected SMS/OTP messages per user per month?",
+    "existing": "",
+    "status": "To estimate",
+    "unit": "Messages/user/month",
+    "guidance": "Break down onboarding, login, alerts, security and marketing.",
+    "plainQuestion": "How many text messages or OTPs will each user receive in a typical month?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Email/Push",
+    "id": "EMAIL_PROVIDER",
+    "question": "Email provider and monthly/per-message costs?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Which email service will Pursely use, and what are its monthly or per-email fees?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Email/Push",
+    "id": "PUSH_PROVIDER",
+    "question": "Push notification provider and costs?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Which service will send app notifications, and what does it cost?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Cloud",
+    "id": "CLOUD_PROVIDER",
+    "question": "Cloud provider(s) for backend, database, storage, networking and monitoring?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Which cloud companies will host the app, database, files, network, and monitoring tools?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Cloud",
+    "id": "CLOUD_FIXED",
+    "question": "Current fixed monthly cloud costs and committed minimums?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ or FX / month",
+    "guidance": "State invoice currency, FX and VAT.",
+    "plainQuestion": "What are the fixed monthly cloud bills and any minimum commitments?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Cloud",
+    "id": "CLOUD_VARIABLE",
+    "question": "Usage-based cloud cost per active user/transaction?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / user / month",
+    "guidance": "Include compute, database, storage, egress, logs, queues and backups.",
+    "plainQuestion": "How much do cloud services cost as usage grows, per active user or transaction?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Cloud",
+    "id": "CLOUD_SECURITY",
+    "question": "Security, secrets, WAF, DDoS, audit logs and vulnerability-scanning costs?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦ / month",
+    "guidance": "",
+    "plainQuestion": "What will security tools cost, such as access protection, attack prevention, audit records, and vulnerability checks?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "AI",
+    "id": "AI_PROVIDER",
+    "question": "Model/API providers and model names?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "Include model routing and on-device/cloud responsibilities.",
+    "plainQuestion": "Which AI companies and model versions will Pursely use?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "AI",
+    "id": "AI_USAGE",
+    "question": "AI interactions per active user per day/month?",
+    "existing": "",
+    "status": "To estimate",
+    "unit": "Interactions/user/month",
+    "guidance": "Break out interview, planning, insights, agent actions and support.",
+    "plainQuestion": "How many times will each active user use AI per day or month?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "AI",
+    "id": "AI_TOKENS",
+    "question": "Average input/output tokens per interaction or user?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "Tokens",
+    "guidance": "",
+    "plainQuestion": "How much text will each AI interaction process and generate, on average?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "AI",
+    "id": "AI_COST",
+    "question": "Model/API cost per interaction and per active user?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "₦",
+    "guidance": "Include retries, tools, embeddings and context retrieval.",
+    "plainQuestion": "What does AI usage cost per interaction and per active user?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "AI",
+    "id": "CAG_COST",
+    "question": "CAG/context storage, retrieval, vector/search or embedding costs?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "Describe actual architecture; do not assume RAG.",
+    "plainQuestion": "What will it cost to store and search the context or data the AI needs to answer users?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "AI",
+    "id": "AI_POLICY_COST",
+    "question": "Moderation, policy/safety, validation and audit service costs?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "What will safety checks, moderation, validation, and audit records for AI cost?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "AI",
+    "id": "ON_DEVICE_COST",
+    "question": "On-device ML licensing, model distribution/updates, telemetry and support costs?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "Separate recurring cloud cost from engineering/fixed cost.",
+    "plainQuestion": "What will it cost to license, deliver, update, monitor, and support AI models running on users’ devices?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Support",
+    "id": "SUPPORT_COST",
+    "question": "Support channels and expected cost per user/ticket?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "Include staffing, tooling and outsourcing.",
+    "plainQuestion": "Which support channels will you offer, and what will each support request or user cost?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Risk",
+    "id": "FRAUD_COST",
+    "question": "Fraud monitoring, transaction screening, disputes, chargebacks and loss costs?",
+    "existing": "",
+    "status": "Unknown",
+    "unit": "",
+    "guidance": "Separate per-check fee from expected fraud loss.",
+    "plainQuestion": "What will fraud checks, transaction screening, disputes, chargebacks, and fraud losses cost?"
+  },
+  {
+    "section": "04 Provider pricing and infrastructure",
+    "area": "Other vendors",
+    "id": "OTHER_VENDOR_COSTS",
+    "question": "List all other vendors, licences, integrations and recurring costs.",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Include amount, frequency, currency, VAT, renewal and minimum commitment.",
+    "plainQuestion": "What other suppliers, software licences, integrations, or ongoing services will Pursely pay for?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "MVP scope",
+    "id": "WALLET_SCOPE",
+    "question": "Which wallet/money movement functions are MVP, Phase 2 and future?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Which wallet and money-movement features are included at launch, planned for Phase 2, or later?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Payments",
+    "id": "MERCHANT_PAYMENTS",
+    "question": "Can users pay merchants directly from Pursely? How and at what provider cost?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "This determines whether daily spendable activity creates chargeable events.",
+    "plainQuestion": "Can users pay merchants directly from Pursely? If yes, how will it work and what will providers charge?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Cards",
+    "id": "CARD_ISSUANCE",
+    "question": "Will Pursely issue virtual/physical cards? Include issuance, maintenance, authorisation and interchange economics.",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Will Pursely issue virtual or physical cards, and what will issuing and using them cost or earn?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Transfers",
+    "id": "TRANSFER_TYPES",
+    "question": "List supported bank transfers, internal pocket transfers, wallet-to-wallet, cash withdrawals, bill pay and merchant payments.",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "For each, state customer fee and provider cost.",
+    "plainQuestion": "Which money actions will users be able to take, such as bank transfers, pocket transfers, cash-outs, bill payments, or merchant payments?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Reliability",
+    "id": "SUCCESS_RATE",
+    "question": "Expected transaction success rate by transaction type?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "",
+    "plainQuestion": "For each transaction type, what share should complete successfully?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Reliability",
+    "id": "FAILURE_RATE",
+    "question": "Expected failed transaction rate by transaction type?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "Include retries and provider charges.",
+    "plainQuestion": "For each transaction type, what share might fail?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Reliability",
+    "id": "REVERSAL_RATE",
+    "question": "Expected reversal/refund/dispute rate?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "%",
+    "guidance": "",
+    "plainQuestion": "What share of transactions might be reversed, refunded, or disputed?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Settlement",
+    "id": "SETTLEMENT_TIME",
+    "question": "Settlement and reconciliation time by rail/provider?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "Minutes/hours/days",
+    "guidance": "",
+    "plainQuestion": "How long does each provider or payment network take to settle and reconcile transactions?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Support",
+    "id": "TICKETS_PER_USER",
+    "question": "Support contacts/tickets per active user per month?",
+    "existing": "",
+    "status": "To estimate",
+    "unit": "Tickets/user/month",
+    "guidance": "Break down by issue type and segment.",
+    "plainQuestion": "How many times will each active user contact support in a typical month?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Fraud",
+    "id": "FRAUD_LOSS_RATE",
+    "question": "Expected unrecovered fraud loss rate?",
+    "existing": "",
+    "status": "To estimate",
+    "unit": "% of transaction value",
+    "guidance": "Keep separate from processing fees.",
+    "plainQuestion": "What share of transaction value might Pursely lose to fraud and be unable to recover?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Compliance",
+    "id": "COMPLIANCE_COSTS",
+    "question": "Regulatory, legal, audit, safeguarding, insurance and reporting obligations/costs?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "List provider, frequency and estimate.",
+    "plainQuestion": "What will required legal, regulatory, audit, customer-money protection, insurance, and reporting work cost?"
+  },
+  {
+    "section": "05 Product operations and transaction drivers",
+    "area": "Reconciliation",
+    "id": "RECON_COST",
+    "question": "Manual/automated reconciliation effort and tooling cost?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "How much time and money will it take to match transactions across Pursely and provider records?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "Marketing",
+    "id": "PAID_MARKETING",
+    "question": "Planned paid marketing budget by month/channel?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / month",
+    "guidance": "Include agency, creative, media and campaign costs.",
+    "plainQuestion": "How much will Pursely spend on paid marketing each month, broken down by channel?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "Marketing",
+    "id": "ORGANIC_COST",
+    "question": "Cash cost of organic acquisition and referrals?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / month",
+    "guidance": "",
+    "plainQuestion": "How much cash will it cost to attract users through unpaid marketing and referrals?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "Referral",
+    "id": "REFERRAL_INCENTIVE",
+    "question": "Referral reward, eligibility, fraud controls and expected referrals?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / referred user",
+    "guidance": "",
+    "plainQuestion": "What reward will a referrer get, who qualifies, how will abuse be prevented, and how many referrals are expected?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "CAC",
+    "id": "CASH_CAC",
+    "question": "Cash CAC per new funded user?",
+    "existing": "",
+    "status": "To calculate",
+    "unit": "₦ / funded user",
+    "guidance": "",
+    "plainQuestion": "How much cash will Pursely spend to acquire each new user who funds a wallet?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "CAC",
+    "id": "FULLY_LOADED_CAC",
+    "question": "Fully loaded CAC including staff time, events, partnerships, creative, incentives and media?",
+    "existing": "",
+    "status": "To calculate",
+    "unit": "₦ / funded user",
+    "guidance": "Report cash CAC separately.",
+    "plainQuestion": "Including staff time and all marketing costs, how much does it cost to acquire each new funded user?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "Onboarding",
+    "id": "ONBOARDING_COST",
+    "question": "One-time onboarding cost per registration, KYC-complete user and funded user?",
+    "existing": "",
+    "status": "To calculate",
+    "unit": "₦ / user",
+    "guidance": "Include KYC, OTP, support and incentives.",
+    "plainQuestion": "What does it cost to take one person from signup to identity verification and wallet funding?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "People",
+    "id": "HEADCOUNT",
+    "question": "List current/planned roles, start dates, employment type and monthly cash compensation.",
+    "existing": "Founder roles/responsibilities framework exists in project materials; costs not entered here",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Include founders, engineering, product, finance, compliance, operations, support and growth.",
+    "plainQuestion": "Which roles are hired or planned, when will they start, and what will each person be paid each month?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "People",
+    "id": "FOUNDER_PAY",
+    "question": "Founder salary/stipend and start date?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / month",
+    "guidance": "Separate paid cash compensation from unpaid founder labour.",
+    "plainQuestion": "How much will founders be paid each month, and when does that pay start?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "People",
+    "id": "EMPLOYER_COSTS",
+    "question": "Employer taxes, pension, benefits, equipment and recruitment costs?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / employee",
+    "guidance": "",
+    "plainQuestion": "What extra costs come with each employee, such as pension, benefits, equipment, taxes, or recruitment?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "Overhead",
+    "id": "OFFICE_COST",
+    "question": "Office/coworking, utilities and equipment costs?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / month",
+    "guidance": "",
+    "plainQuestion": "What will office space, coworking, utilities, and equipment cost?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "Overhead",
+    "id": "LEGAL_AUDIT",
+    "question": "Legal, accounting, audit, tax, regulatory and company-secretarial costs?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / month or year",
+    "guidance": "",
+    "plainQuestion": "What will legal, accounting, audit, tax, regulatory, and company administration cost?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "Overhead",
+    "id": "SOFTWARE",
+    "question": "Fixed software subscriptions, licences and collaboration tools?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / month",
+    "guidance": "",
+    "plainQuestion": "What are the fixed monthly costs for software, licences, and team tools?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "Overhead",
+    "id": "INSURANCE",
+    "question": "Insurance, cyber risk and professional indemnity costs?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / month or year",
+    "guidance": "",
+    "plainQuestion": "What will business, cyber, and professional insurance cost?"
+  },
+  {
+    "section": "06 Acquisition, people and overhead",
+    "area": "Overhead",
+    "id": "OTHER_FIXED",
+    "question": "Other fixed operating and one-off setup costs?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "Separate recurring and one-off.",
+    "plainQuestion": "What other regular operating costs or one-time setup costs should be included?"
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Capital",
+    "id": "CASH_AVAILABLE",
+    "question": "Current company cash available for operations?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦",
+    "guidance": "Exclude customer funds.",
+    "plainQuestion": "How much company cash is available to pay operating expenses today? Leave out customer money."
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Capital",
+    "id": "FOUNDER_FUNDING",
+    "question": "Additional founder capital committed and contribution dates?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / date",
+    "guidance": "Separate committed from aspirational.",
+    "plainQuestion": "How much extra money have founders committed to contribute, and on what dates?"
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Capital",
+    "id": "EXTERNAL_FUNDING",
+    "question": "External funding pursued (equity, grants, debt, accelerator, strategic), target amount and timing?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / date",
+    "guidance": "",
+    "plainQuestion": "What outside funding is Pursely seeking, how much, from what source, and when?"
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Capital",
+    "id": "FUNDING_COST",
+    "question": "Interest, fees, dilution or other financing costs?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "What will funding cost in interest, fees, ownership given up, or other charges?"
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Working capital",
+    "id": "PREFUNDING",
+    "question": "Provider prefunding, settlement balances or operational reserve requirements?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦",
+    "guidance": "",
+    "plainQuestion": "How much cash must Pursely place with providers or keep available for settlements and operations?"
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Working capital",
+    "id": "RESERVES",
+    "question": "Rolling reserves, minimum balances, collateral or security deposits?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / %",
+    "guidance": "",
+    "plainQuestion": "Are any rolling reserves, minimum balances, collateral, or deposits required? How much?"
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Working capital",
+    "id": "SETTLEMENT_GAP",
+    "question": "Timing gap between customer funding, provider settlement and company expense payments?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "Days",
+    "guidance": "",
+    "plainQuestion": "How many days pass between receiving customer funds, provider settlement, and paying company expenses?"
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Runway",
+    "id": "CASH_BUFFER",
+    "question": "Minimum operating cash buffer?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ or months",
+    "guidance": "",
+    "plainQuestion": "What minimum amount of cash should Pursely keep available for operations?"
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Runway",
+    "id": "BURN_LIMIT",
+    "question": "Acceptable monthly burn during MVP and launch?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / month",
+    "guidance": "",
+    "plainQuestion": "What is the maximum monthly cash loss Pursely can accept during the MVP and launch?"
+  },
+  {
+    "section": "07 Funding, runway and working capital",
+    "area": "Runway",
+    "id": "RUNWAY_TARGET",
+    "question": "Minimum runway to maintain?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "Months",
+    "guidance": "",
+    "plainQuestion": "How many months of operating cash should Pursely always try to keep?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Forecast",
+    "id": "BASE_CASE",
+    "question": "Base-case monthly growth and operating assumptions?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "What monthly growth, revenue, and cost assumptions describe the most likely scenario?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Forecast",
+    "id": "DOWNSIDE_CASE",
+    "question": "Downside scenario assumptions (lower conversion/retention/balances, higher costs)?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "What assumptions describe a tougher scenario, with slower growth or retention and higher costs?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Forecast",
+    "id": "UPSIDE_CASE",
+    "question": "Upside scenario assumptions?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "What assumptions describe a stronger-than-expected scenario?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Sensitivity",
+    "id": "SENSITIVITY",
+    "question": "Which assumptions require sensitivity analysis?",
+    "existing": "Funding mix, Premium conversion, eligible balances/float terms, vendor pricing, AI consumption and retention",
+    "status": "Proposed",
+    "unit": "",
+    "guidance": "Also consider transaction frequency, average ticket, fee rate, failed transaction rate and CAC.",
+    "plainQuestion": "Which assumptions should the model vary to see how much they change the results?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Targets",
+    "id": "CONTRIBUTION_TARGET",
+    "question": "Required contribution per active-funded user or transaction?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "₦ / user; %",
+    "guidance": "",
+    "plainQuestion": "How much should each funded active user or transaction contribute after its direct costs?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Targets",
+    "id": "CAC_PAYBACK",
+    "question": "Acceptable CAC payback period?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "Months",
+    "guidance": "",
+    "plainQuestion": "Within how many months should the profit from a new user recover the cost of acquiring them?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Targets",
+    "id": "LTV_CAC",
+    "question": "Target minimum LTV:CAC ratio?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "x",
+    "guidance": "",
+    "plainQuestion": "What minimum ratio do you want between the total value a customer brings over time and the cost to acquire that customer?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Targets",
+    "id": "BREAK_EVEN_MONTH",
+    "question": "Target month for operating break-even?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "Month",
+    "guidance": "",
+    "plainQuestion": "By which month should monthly revenue cover monthly operating costs?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Targets",
+    "id": "SCALE_GUARDRAILS",
+    "question": "What unit-economics thresholds must be met before scaling paid acquisition?",
+    "existing": "",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "What financial targets must Pursely meet before increasing paid advertising?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Accounting",
+    "id": "REVENUE_RECOGNITION",
+    "question": "Confirm revenue recognition for transaction fees, subscriptions, float share and pass-through charges.",
+    "existing": "Customer deposits are not Pursely revenue; only contracted share of eligible float income may be revenue",
+    "status": "Modelling principle established",
+    "unit": "",
+    "guidance": "Confirm with accountant and applicable standards.",
+    "plainQuestion": "When should fees, subscriptions, float income, and pass-through charges count as Pursely revenue?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Accounting",
+    "id": "CUSTOMER_FUNDS",
+    "question": "Confirm customer balances are kept separate from company operating cash/revenue.",
+    "existing": "Customer deposits are not Pursely revenue",
+    "status": "Established modelling principle",
+    "unit": "",
+    "guidance": "Never count customer principal as company revenue or available operating cash.",
+    "plainQuestion": "How will you keep customer wallet balances separate from Pursely’s own cash and revenue?"
+  },
+  {
+    "section": "08 Forecast scenarios and target economics",
+    "area": "Reporting",
+    "id": "KPI_DEFINITIONS",
+    "question": "Define CAC, MAU, active-funded, churn, ARPU, ARPPU, gross margin, contribution margin, LTV and payback.",
+    "existing": "Framework proposed",
+    "status": "To confirm",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "How should the team calculate CAC, active users, churn, revenue per user, margins, customer value, and payback?"
+  },
+  {
+    "section": "09 Clarifications from previous answers",
+    "area": "Funnel",
+    "id": "MAU_FUNDED_RECONCILIATION",
+    "question": "How do 6,000 MAU reconcile with 5,200 implied funded wallets? Different dates, unfunded MAUs, or revised funnel?",
+    "existing": "6,000 MAU; 5,200 implied funded wallets",
+    "status": "Open clarification",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Why are there 6,000 expected monthly users but only 5,200 estimated funded wallets? Are these figures for different dates or based on different assumptions?"
+  },
+  {
+    "section": "09 Clarifications from previous answers",
+    "area": "Deposits",
+    "id": "DEPOSIT_AMOUNT_CONFIRM",
+    "question": "Confirm average monthly deposit per funded user: ₦250,000 or another amount?",
+    "existing": "₦250,000 later clarification; earlier entry showed ₦2,500,000",
+    "status": "Needs reconfirmation",
+    "unit": "₦ / month",
+    "guidance": "",
+    "plainQuestion": "Is the average monthly deposit per funded user ₦250,000? If not, what amount should we use?"
+  },
+  {
+    "section": "09 Clarifications from previous answers",
+    "area": "Provider tariff",
+    "id": "TARIFF_CONFIRM",
+    "question": "Are ₦10 / ₦20 / ₦50 charges Rova fees, another provider's fees or estimates?",
+    "existing": "Below ₦10k: ₦10; ₦10k–₦50k: ₦20; above ₦50k: ₦50",
+    "status": "Unverified estimate",
+    "unit": "₦ / transaction",
+    "guidance": "Confirm thresholds and exact boundary treatment.",
+    "plainQuestion": "Are the ₦10, ₦20, and ₦50 transaction fees Rova’s official prices, another provider’s prices, or estimates?"
+  },
+  {
+    "section": "09 Clarifications from previous answers",
+    "area": "Daily spendable",
+    "id": "DAILY_FEE_CONFIRM",
+    "question": "Is the ₦25.86 example fee charged on every daily spend, external merchant payment or only withdrawal/outward transfer?",
+    "existing": "₦1,724.14 × 1.5% = ₦25.86; chargeable event unresolved",
+    "status": "Open clarification",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "When exactly would the ₦25.86 example fee be charged: on every daily spend, only merchant purchases, or only transfers out?"
+  },
+  {
+    "section": "09 Clarifications from previous answers",
+    "area": "VAT",
+    "id": "VAT_SCOPE_CONFIRM",
+    "question": "Does 7.5% VAT apply to BaaS provider invoices, Pursely customer fees, both or another charge?",
+    "existing": "7.5% mentioned as BaaS-provider VAT",
+    "status": "Open clarification",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Does the 7.5% VAT apply to provider bills, customer fees, both, or something else?"
+  },
+  {
+    "section": "09 Clarifications from previous answers",
+    "area": "Fee cap",
+    "id": "FEE_CAP_SCOPE_CONFIRM",
+    "question": "Does ₦500 cap apply separately to every qualifying withdrawal/outward transfer?",
+    "existing": "₦500 proposed cap",
+    "status": "Needs confirmation",
+    "unit": "₦",
+    "guidance": "",
+    "plainQuestion": "Does the ₦500 maximum fee apply to each eligible withdrawal or transfer separately?"
+  },
+  {
+    "section": "09 Clarifications from previous answers",
+    "area": "Funding mix",
+    "id": "FUNDING_MIX_BASIS_CONFIRM",
+    "question": "Are 75% bank transfer / 25% Direct Debit percentages by transaction count or funding value?",
+    "existing": "75% bank transfer; 25% Direct Debit; 0% card",
+    "status": "Needs confirmation",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Are the 75% bank transfer and 25% Direct Debit shares based on transaction count or total money funded?"
+  },
+  {
+    "section": "09 Clarifications from previous answers",
+    "area": "Retention",
+    "id": "RETENTION_CONFIRM",
+    "question": "Confirm 90-day retention at 60%, replacing earlier 80% selection.",
+    "existing": "60% selected later",
+    "status": "Needs reconfirmation",
+    "unit": "%",
+    "guidance": "",
+    "plainQuestion": "Should we use 60% of users still active after 90 days, replacing the earlier 80% estimate?"
+  },
+  {
+    "section": "09 Clarifications from previous answers",
+    "area": "Float",
+    "id": "FLOAT_BASELINE_CONFIRM",
+    "question": "Confirm float income excluded from baseline until signed terms define eligibility, share and calculation.",
+    "existing": "Contingent; no signed terms established",
+    "status": "Baseline exclusion",
+    "unit": "",
+    "guidance": "",
+    "plainQuestion": "Should the base forecast leave out float income until a signed agreement confirms eligibility, Pursely’s share, and how it is calculated?"
+  }
+]</script>
+  <script src="app.js" defer></script>
+</body>
+
+</html>
